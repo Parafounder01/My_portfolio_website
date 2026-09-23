@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Anantha Kumar M R | Linux Systems &amp; EDA Infrastructure</title>
-<meta name="description" content="Portfolio of Anantha Kumar M R in Trichy, featuring Linux administration, EDA infrastructure, automation, and embedded projects.">
+<meta name="description" content="Portfolio of Anantha Kumar M R in Trichy, featuring Linux administration, EDA infrastructure, automation, SQL data warehousing, and embedded projects.">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,6 +71,7 @@
       <div class="prose">
         <p>I work as a Technical Assistant at SRM TRP Engineering College in Trichy, where I install and maintain EDA tools such as Cadence, Synopsys, Siemens EDA, Xilinx Vivado, and Ansys HFSS, and manage license servers and lab workstations connected to central servers.</p>
         <p>I write Bash and Python automation for routine system checks and troubleshooting, and I support hands-on hardware including FPGA boards and Oculus Quest 2 headsets, so students and technical teams can keep working without infrastructure friction.</p>
+        <p>I also build SQL data projects — a Medallion data warehouse and a SQL risk auditor — listed under Data in the projects section below.</p>
       </div>
       <div class="term-pane" role="region" aria-label="System profile">
         <div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">system-profile — static</span></div>
@@ -205,6 +206,7 @@
       <button class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
       <button class="filter-btn" data-filter="embedded" aria-pressed="false">Embedded</button>
       <button class="filter-btn" data-filter="infrastructure" aria-pressed="false">Infrastructure</button>
+      <button class="filter-btn" data-filter="data" aria-pressed="false">Data</button>
     </div>
     <div class="projects-grid" id="projects-grid">
       <article class="term-pane project" data-category="automation">
@@ -252,8 +254,40 @@
           </details>
         </div>
       </article>
+      <article class="term-pane project" data-category="data">
+        <div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">medallion-dw — data</span></div>
+        <div class="term-body">
+          <p class="proj-cat">[ DATA ]</p>
+          <h3>Medallion Data Warehouse</h3>
+          <p class="proj-purpose">A Bronze → Silver → Gold SQL Server pipeline ending in a query-ready star schema.</p>
+          <p class="proj-tools">Tools: SQL Server · T-SQL · Window functions · Python (tests)</p>
+          <details class="more">
+            <summary>READ DETAILS</summary>
+            <div class="detail-block"><h4>Context</h4><p>Raw extracts need a reliable path to clean, analysis-ready tables with full lineage.</p></div>
+            <div class="detail-block"><h4>Implementation</h4><p>Built raw landing, TRY_CAST cleansing with ROW_NUMBER() deduplication, and dim/fact loads plus an analytical view using SUM() OVER, LAG, and NTILE — all with transaction control and DQ checks.</p></div>
+            <div class="detail-block"><h4>Outcome</h4><p>Documented templates with passing static and grammar-level test suites, ready to adapt to real sources.</p></div>
+          </details>
+          <p class="proj-links"><a href="https://github.com/Parafounder01/Medallion-Architecture" target="_blank" rel="noopener noreferrer">[ REPO ]</a></p>
+        </div>
+      </article>
+      <article class="term-pane project" data-category="data">
+        <div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">sql-audit — data</span></div>
+        <div class="term-body">
+          <p class="proj-cat">[ DATA ]</p>
+          <h3>SQL Risk Auditor</h3>
+          <p class="proj-purpose">A static analyzer that flags risky SQL and suggests fixes before production.</p>
+          <p class="proj-tools">Tools: Python · sqlglot</p>
+          <details class="more">
+            <summary>READ DETAILS</summary>
+            <div class="detail-block"><h4>Context</h4><p>Risky SQL — SELECT *, non-sargable predicates, missing keys — should be caught before it reaches production.</p></div>
+            <div class="detail-block"><h4>Implementation</h4><p>Built a zero-dependency pattern engine that reports severity, line numbers, root causes, and remediation snippets; verified against a sample reporting 12 findings.</p></div>
+            <div class="detail-block"><h4>Outcome</h4><p>A reusable reviewer for SQL scripts, with rules in a single file that are easy to extend.</p></div>
+          </details>
+          <p class="proj-links"><a href="https://github.com/Parafounder01/Static-Analysis-Risk-Auditing" target="_blank" rel="noopener noreferrer">[ REPO ]</a></p>
+        </div>
+      </article>
     </div>
-    <p class="proj-note">Project repository and demo links are not published. See the <a href="https://github.com/Parafounder01" target="_blank" rel="noopener noreferrer">GitHub profile</a> for general activity.</p>
+    <p class="proj-note">The two Data projects link to their public repositories above. Other project repository and demo links are not published — see the <a href="https://github.com/Parafounder01" target="_blank" rel="noopener noreferrer">GitHub profile</a> for general activity.</p>
   </div>
 </section>
 
@@ -327,7 +361,7 @@
   <div class="container reveal">
     <p class="shell-label" aria-hidden="true">$ ./contact --open</p>
     <h2 id="contact-heading">CONTACT <span class="h2-dim">/ LET'S DISCUSS YOUR ROLE</span></h2>
-    <p class="contact-lead">For opportunities in Linux systems, EDA infrastructure, technical support, or automation, contact me by email or phone.</p>
+    <p class="contact-lead">For opportunities in Linux systems, EDA infrastructure, technical support, automation, or data analysis, contact me by email or phone.</p>
     <div class="term-pane">
       <div class="term-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">contact.vcf</span></div>
       <div class="term-body">

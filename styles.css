@@ -154,6 +154,7 @@ button.btn-secondary{font-family:inherit}
 .proj-purpose{color:var(--color-text);font-size:15px;margin:8px 0}
 .proj-tools{color:var(--color-text-secondary);font-size:13px;margin-bottom:8px}
 .proj-note{margin-top:20px;font-size:14px;color:var(--color-text-secondary)}
+.proj-links{margin-top:12px;font-size:14px}
 
 /* education */
 .edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
